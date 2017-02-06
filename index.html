@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Excel-2-CSV Converter</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  <div id="body_wrap">
+    <h1><span class="shadow-underline bold">Excel-2-CSV Converter</span></h1>
+
+    <h2>Excel Files</h2>
+    <div>Select all of the Excel files whose individual tabs (AKA sheets) you want to convert to CSV files:</div>
+    <div id="dropzone">
+      <div class="center">You can drag &amp; drop files to this section or use the buttons below to add them manually.</div>
+      <div class="center">
+        <button id="btnAddFiles">Add Files <span class="glyphicon glyphicon-file" aria-hidden="true"></span></button>
+        <button id="btnAddFolders">Add Folders <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></button>
+        <button id="btnClearFiles">Clear Files List <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+      </div>
+      <table id="filesList"></table>
+    </div>
+
+    <h2>CSV Processor</h2>
+    <div>Select the processing function to use on the workbooks:</div>
+
+    <div class="input-group">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default btn-primary">Edit Processors</button>
+        <button type="button" class="btn btn-default btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;<span class="caret"></span>&nbsp;<span class="sr-only">Toggle Dropdown</span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+      <input class="form-control" aria-label="Text input with segmented button dropdown">
+    </div>
+
+    <div id="editor" style="height: 400px;"></div>
+  </div>
+
+  <script>
+  $ = jQuery = require('./jquery-2.2.1.min.js');
+  JS = require('./YourJS/JS.min.js');
+  require('./app.js');
+  </script>
+</body>
+</html>

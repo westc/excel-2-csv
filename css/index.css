@@ -1,0 +1,88 @@
+body {
+  font-family: Verdana;
+  overflow: hidden;
+
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.1) 30px, rgba(0,0,0,0.05) 30px, rgba(0,0,0,0.1) 60px), linear-gradient(180deg, #FFF, #7BF 49%, #012 51%, #07F)
+}
+#body_wrap {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 0 5px rgba(255,255,255,0.7);
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.shadow-underline {
+    box-shadow: 0 0.15em 0.1em -0.1em;
+}
+.bold {
+    font-weight: bold;
+}
+#dropzone {
+  background: #EEE;
+  box-shadow: inset 0 0 3px 1px #FFF, 0 0 1px 1px;
+  min-height: 200px;
+  border-radius: 5px;
+  padding: 5px;
+  position: relative;
+}
+.center {
+  text-align: center;
+}
+
+#filesList {
+  width: 100%;
+}
+
+#filesList td {
+  border-collapse: collapse;
+  border: 1px solid #CCC;
+}
+
+#filesList tr.dirname td {
+  font-weight: bold;
+  background: linear-gradient(180deg, #FFF, #CCC);
+}
+
+#filesList td.icon {
+  width: 1px;
+  border-right-width: 0;
+  vertical-align: top;
+  padding: 2px;
+}
+
+#filesList td.text {
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+#filesList tr.basename td {
+  background: #FFF;
+}
+
+#filesList tr.basename td.text input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  background: transparent;
+  text-overflow: ellipsis;
+}
+
+#filesList tr.basename:hover td {
+  background: #FFC;
+}
+
+#filesList td.options {
+  border-left-width: 0;
+  width: 1px;
+  padding: 0 2px;
+}
+#filesList td.options a {
+  cursor: pointer;
+}
