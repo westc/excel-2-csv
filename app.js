@@ -316,7 +316,7 @@ function processFiles(createFiles) {
             newPath = func(data, { name: name, index: index, values: sheet });
             newData = path.parse(newPath);
             newDir = newData.dir;
-            
+
             JS.extend(listItemData, {
               newPath: newPath,
               newDirWithSep: newDir.endsWith(sep) ? newDir : (newDir + sep),
@@ -350,6 +350,18 @@ function processFiles(createFiles) {
 
     if (filePaths.length) {
       vueProcs.previewTime = JS.formatDate(new Date, "DDDD MMMM D, YYYY 'at' h:mm:ssA");
+      
+      if (createFiles) {
+        remote.dialog.showMessageBox({
+          type: 'info',
+          buttons: ['OK'],
+          defaultId: 0,
+          cancelId: 0,
+          title: 'Create Files',
+          message: 'The creation process is complete.',
+          noLink: true
+        });
+      }
     }
   }
 }
