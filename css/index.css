@@ -86,3 +86,65 @@ body {
 #filesList td.options a {
   cursor: pointer;
 }
+#tdProcDropdown {
+  width: 99%;
+}
+#tdProcButtons {
+  padding-left: 1em;
+  width: 1px;
+  white-space: nowrap;
+}
+#tdProcButtons button {
+  float: none;
+}
+code {
+  white-space: nowrap;
+}
+.file-list-item code {
+  white-space: normal;
+  box-shadow: 0 0 1px;
+}
+.file-list-item {
+  box-shadow: 0 0 1px;
+  margin: 0.5em 0;
+  background: #DEF;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+.file-list-item > .title {
+  box-shadow: 0 7px 5px -3px;
+  padding: 5px;
+  background: #FFF;
+  margin-bottom: 5px;
+}
+.new-path:before {
+  content: '\27A5';
+  position: absolute;
+  top: -0.25em;
+  left: 0.5em;
+  font-size: 1.5em;
+}
+.new-path {
+  position: relative;
+  padding-left: 2.5em;
+}
+.error:before {
+  content: '\2716';
+  position: absolute;
+  top: -0.25em;
+  left: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #F00;
+}
+.error {
+  position: relative;
+  padding-left: 2.5em;
+  text-shadow: 0 0 1px #F00;
+}
+.list-item:before {
+  content: '\2739';
+  position: absolute;
+  left: 0.5em;
+}
